@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 """ 1) Any live cell with fewer than two live neighbours dies, as if by under population.
     2) Any live cell with two or three live neighbours lives on the next generation
     3) Any live cell with more than three live neighbours dies, as if by overpopulation.
