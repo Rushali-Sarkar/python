@@ -1,0 +1,19 @@
+CHATBOT
+
+
+First : Link bot to google to get answers
+
+Second: Make it interactive to say hi, hello, how are you , bbye
+
+"********Third: It opens up status of person u call for*******"
+
+Fourth: Sendds stickers an emojis and jokes when you ask 
+
+Fifth: Recommend you something to watch if you are bored, movie, series of the genere you prefer
+
+Sixth: Help the bot to be interactive with cahtiing on different topics
+
+Seventh : We will keep on pinging the person maybe every 6/8 hours about how he is feeling, does he want to talk, does he want to talk, 
+does he need help
+
+
