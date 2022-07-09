@@ -44,12 +44,11 @@ def worst_fit(blocks: list[int], processes: list[int]):
                 elif blocks[block_number] > blocks[worst_fit_block]:
                     worst_fit_block = block_number
         if worst_fit_block != -1:
-            blocks[worst_fit_block] -= process_size
+            printFragment(processes, blocks, allocation)
             allocation[worst_fit_block] = process_number
         if -1 not in allocation:
             break
     
-    print(allocation)
     return
 
 if __name__ == "__main__":
@@ -59,7 +58,11 @@ if __name__ == "__main__":
     blocks = createRandomList(max_blocks, max_block_size)
 
     max_processes = int(input("Enter the maximum number of processes \n"))
-    max_process_size = int(input("Enter the maxium size of each process \n"))
+    max_process_size = int(input("Enter the maximum size of each process \n"))
     processes = createRandomList(max_processes, max_process_size)
 
+    print("-------------------------------------------------------------")
+    print("Blocks: ", *blocks)
+    print("Process: ", *processes)
+    print("-------------------------------------------------------------")
     worst_fit(blocks, processes)

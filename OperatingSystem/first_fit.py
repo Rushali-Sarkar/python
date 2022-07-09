@@ -52,9 +52,13 @@ if __name__ == "__main__":
     blocks = createRandomList(max_blocks, max_block_size)
 
     max_processes = int(input("Enter the maximum number of processes \n"))
-    max_process_size = int(input("Enter the maxium size of each process \n"))
+    max_process_size = int(input("Enter the maximum size of each process \n"))
     processes = createRandomList(max_processes, max_process_size)
 
+    print("-------------------------------------------------------------")
+    print("Blocks: ", *blocks)
+    print("Process: ", *processes)
+    print("-------------------------------------------------------------")
     first_fit(blocks, processes)
 
 

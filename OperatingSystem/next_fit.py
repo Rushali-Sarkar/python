@@ -42,8 +42,8 @@ def next_fit(blocks: list[int], processes: list[int]):
             block_size = blocks[block_number]
             if block_size >= process_size and allocation[block_number] == -1:
                 current_starting_point = block_number + 1
-                blocks[block_number] = block_size - process_size
                 allocation[block_number] = process_number
+                printFragment(processes, blocks, allocation)
                 break
         if -1 not in allocation:
             break
@@ -51,7 +51,6 @@ def next_fit(blocks: list[int], processes: list[int]):
             current_starting_point = 0
     
 
-    print(allocation)
     return
 
 if __name__ == "__main__":
@@ -61,7 +60,12 @@ if __name__ == "__main__":
     blocks = createRandomList(max_blocks, max_block_size)
 
     max_processes = int(input("Enter the maximum number of processes \n"))
-    max_process_size = int(input("Enter the maxium size of each process \n"))
+    max_process_size = int(input("Enter the maximum size of each process \n"))
     processes = createRandomList(max_processes, max_process_size)
 
+    print("-------------------------------------------------------------")
+    print("Blocks: ", *blocks)
+    print("Process: ", *processes)
+    print("-------------------------------------------------------------")
     next_fit(blocks, processes)
+
